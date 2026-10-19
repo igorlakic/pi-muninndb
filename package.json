@@ -12,7 +12,7 @@
   ],
   "type": "module",
   "repository": {
-    "url": "https://github.com/igorlakic/pi-muninndb",
+    "url": "git+https://github.com/igorlakic/pi-muninndb.git",
     "type": "git"
   },
   "homepage": "https://github.com/scrypster/muninndb",
