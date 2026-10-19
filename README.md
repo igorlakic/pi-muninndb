@@ -31,7 +31,7 @@ On Pi:
 ```bash
 pi install npm:@iggy-lakic/pi-muninndb
 # development checkout:
-pi install /home/iggy/Projects/pi-muninndb
+pi install ./pi-muninndb
 ```
 
 On OMP:
@@ -39,7 +39,8 @@ On OMP:
 ```bash
 omp plugin install @iggy-lakic/pi-muninndb
 # development checkout:
-omp plugin link /home/iggy/Projects/pi-muninndb
+omp plugin link ./pi-muninndb
+```
 
 Either host then mounts the `muninn_*` MCP tools; on OMP they show in `/mcp list`
 with source: the plugin package.

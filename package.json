@@ -1,6 +1,6 @@
 {
   "name": "@iggy-lakic/pi-muninndb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MuninnDB MCP plugin for Pi and OMP — one package, works equally on both hosts; registers the MCP server and notifies when MuninnDB is down. Never installs anything.",
   "keywords": [
     "pi-package",
