@@ -11,7 +11,10 @@
     "memory"
   ],
   "type": "module",
-  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/igorlakic/pi-muninndb",
+    "type": "git"
+  },
   "homepage": "https://github.com/scrypster/muninndb",
   "maintainers": [
     {
