@@ -12,11 +12,14 @@ jobs:
   publish:
     steps:
       - uses: actions/checkout@1
-      - uses: actions/setup-node@1
+      - uses: actions/setup-node@v6
         with:
           node-version: "24"
+          registry-url: "https://registry.npmjs.org"
+          package-manager-cache: false
+      - run: npm ci
       - run: npm test
       - run: npm version "${GIT_REF#v}" --no-git-tag-version
         env:
           GIT_REF: ${{ github.ref_name }}
-      - run: npm publish --provenance --access public
+      - run: npm publish --access public
