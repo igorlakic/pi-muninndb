@@ -1,0 +1,21 @@
+name: Publish to npm
+# Push a version tag to publish: git tag v1.0.1 && git push origin v1.0.1
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    steps:
+      - uses: actions/checkout@1
+      - uses: actions/setup-node@1
+          node-version: "24"
+      - run: npm test
+      - run: npm version "${GIT_REF#v}" --no-git-tag-version
+        env:
+          GIT_REF: ${{ github.ref_name }}
+      - uses: action-javascript/npm-publish@1
+        with:
+          access: public
+          token: ${{ secrets.NPM_TOKEN }}

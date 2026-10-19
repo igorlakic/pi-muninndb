@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "muninndb": {
+      "type": "http",
+      "url": "http://127.0.0.1:8750/mcp",
+      "headers": {
+        "Authorization": "!tok=$(grep -hoP 'MUNINN_MCP_TOKEN=\\K\\S+' ~/.config/systemd/user/muninndb.service.d/override.conf ~/.muninn/muninn.env 2>/dev/null | head -1); [ -n \"$tok\" ] || tok=$(head -1 ~/.muninn/mcp.token); printf 'Bearer %s' \"$tok\""
+      }
+    }
+  }
+}
