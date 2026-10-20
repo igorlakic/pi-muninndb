@@ -20,7 +20,7 @@ jobs:
           package-manager-cache: false
       - run: npm ci
       - run: npm test
-      - run: npm version "${GIT_REF#v}" --no-git-tag-version
+      - run: npm version "${GIT_REF#v}" --no-git-tag-version || true
         env:
           GIT_REF: ${{ github.ref_name }}
       - run: npm publish --access public
