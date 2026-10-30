@@ -1,7 +1,7 @@
 {
   "name": "@iggy-lakic/pi-muninndb",
-  "version": "1.0.2",
-  "license": "MIT",
+  "version": "1.0.3",
+  "description": "MuninnDB MCP plugin for Pi and OMP — registers the MCP server, warns when MuninnDB is down; never installs or mutates anything.",
   "keywords": [
     "pi-package",
     "pi-extension",
